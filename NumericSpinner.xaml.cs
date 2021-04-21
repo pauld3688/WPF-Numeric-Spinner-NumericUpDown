@@ -65,7 +65,7 @@ namespace Stopbyte.Controls
                 if (value > MaxValue)
                     value = MaxValue;
                 SetValue(ValueProperty, value);
-                ValueChanged(this,new EventArgs());
+                if (ValueChanged != null) ValueChanged(this,new EventArgs());
             }
         }
 
